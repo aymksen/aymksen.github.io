@@ -82,8 +82,10 @@ a{
   color:rgba(253, 253, 253, 0.85);
   font-size: 18px;
   font-weight: 300;
+
+  
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .wrapper{
     flex-direction: column;
   }
@@ -102,7 +104,7 @@ a{
   transition: all 0.3s ease-out;
 }
 
-.svg{
+.img{
   padding-right: 5px;
- 
+  width: 34px;
 }
