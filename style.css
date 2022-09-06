@@ -1,0 +1,108 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  height: 100%;
+  background: linear-gradient(180deg, #00427e 0%, #497aa2 100%);
+  
+ 
+}
+@keyframes AnimationName {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+.name {
+  font-size: calc(25px + 2.5vw);
+  font-weight: 400;
+  background: -webkit-linear-gradient(0deg,#BA9CFF, #8CFAEC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip:text;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+
+}
+
+.desc{
+  font-size: calc(15px + 1.4vw);
+  font-weight: 200;
+  color :white;
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-style: italic;
+}
+.btn{
+  font-size: calc(14px + 0.8vw);
+  font-weight: 300;
+  color :rgb(0, 0, 0);
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  background-color: white;
+  padding: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+}
+.btn:hover{
+  cursor: pointer;
+  background-color: #D9F9FB;
+  transition: all 0.2s ease-out;
+}
+.wrapper{
+  display: flex;
+  gap: 2vw;
+  font-size: calc(12px + 0.5vw);
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  transform: translate(-50%);
+  color:rgba(253, 253, 253, 0.85);
+  font-size: 18px;
+  font-weight: 300;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper{
+    flex-direction: column;
+  }
+
+}
+.item{
+  transition: all 0.2s ease-out;
+
+}
+.item:hover{
+  
+  
+  color:white;
+  cursor: pointer;
+  scale: 1.05;
+  transition: all 0.3s ease-out;
+}
+
+.svg{
+  padding-right: 5px;
+ 
+}
