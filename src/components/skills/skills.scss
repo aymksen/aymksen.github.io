@@ -1,0 +1,90 @@
+@import "../../global.scss";
+
+.works {
+  //backdrop-filter: blur(2px);
+  .txt {
+    overflow: hidden;
+    user-select: none;
+   margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(40px + 5vw);
+    font-style: italic;
+    font-weight: 500;
+    -webkit-text-stroke: 1.5px $white;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    transition: all 1.5s ease;
+  }
+.sliderc{
+  overflow: hidden;
+ 
+ 
+}
+  .slider {
+    
+    //background-color: $redh;
+    height: auto;
+    max-height: 60vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    //backdrop-filter: blur(1px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media only screen and (max-width: 768px) {
+    .slider{
+      margin-left: 3vw;
+    margin-right: 3vw;
+    }
+  }
+  .ic {
+   
+
+    position: relative;
+    img {
+      height: calc(35px + 5vw);
+      width: calc(35px + 5vw);
+      margin-top: 25px;
+      margin-left: 15px;
+      margin-right: 15px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 550px;
+      padding: 5px;
+      
+      box-shadow: rgba(0, 0, 0, 0.24) 1px 2px 2px;
+      
+      // border: 2px solid rgba(250, 248, 248, 0.863);
+      //    filter: drop-shadow(0px 0px 7px rgba(151, 151, 151, 0.719));
+      border: 1px solid $black;
+      transition: all 0.4s;
+    }
+    img:hover {
+      transition: all 0.4s;
+      background-color: rgba(216, 216, 216, 0.74);
+      cursor: pointer;
+    }
+    @media only screen and (max-width: 768px) {
+      img {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 8px;
+        border-radius: 550px;
+        margin-top: 20px;
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+    }
+    .desc{
+      position: relative;
+      color:$white;
+      //text-align: center;
+      display: flex;
+      justify-content: center;
+      font-size:calc(10px + 0.5vw); ;
+      font-weight: 500;
+      
+    }
+  }
+}

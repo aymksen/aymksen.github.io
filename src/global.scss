@@ -1,0 +1,41 @@
+:root {
+  --black: rgba(17, 17, 17, 1);
+  --white: rgba(255, 255, 255, 1);
+  --red: rgba(192, 65, 65, 0.952);
+  --redh: rgba(192, 65, 65, 0.411);
+  --reds: rgb(109, 0, 0);
+  --s1:#2c2c2c;
+  --s2:#ffffff;
+  
+}
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    display: none;
+}
+ 
+}
+body {
+  
+  
+  user-select: none;
+  cursor: default;
+  cursor: url("cursor8.png") 1 1, auto;
+
+  //       a:hover {
+  //         cursor: url('cursor2.png') 19 19,auto!important;
+  //   }
+}
+
+//  $pointer:url('cursor2.png') 19 19, auto ;
+$s1: var(--s1);
+$s2: var(--s2);
+$textp: url("cursor7.png") 1 1, auto;
+$navbar: rgba(var(--black), 0.9);
+$hambar: var(--black);
+$red: var(--red);
+$reds: var(--reds);
+$redh: var(--redh);
+$black: var(--black);
+$white: var(--white);

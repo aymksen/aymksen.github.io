@@ -1,0 +1,21 @@
+@import "../../global.scss";
+
+.portfolioList {
+  overflow: hidden;
+  font-size: 20px;
+  margin-right: 2.5vw;
+  padding: 7px;
+  transition: all 0.5s;
+  color: $white;
+  cursor: pointer;
+  overflow: hidden;
+  &:hover {
+    background-color: $redh;
+    border-radius: 10px;
+    transition: all 0.2s;
+  }
+  &.active {
+    background-color: $red;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,139 @@
+@import "../../global.scss";
+
+.intro {
+  //backdrop-filter: blur(2px);
+  display: flex;
+  @media only screen and (max-width: 768px) {
+    flex: wrap;
+    flex-direction: column-reverse;
+  }
+  position: relative;
+  .btext {
+    overflow: hidden;
+    user-select: none;
+    
+    font-style: italic;
+    font-weight: 500;
+    -webkit-text-stroke: 1.5px $white;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    transition: all 0.8s ease;
+    flex: wrap;
+    @media only screen and (max-width: 768px) {
+      font-size: calc(2vh + 6vw);
+    }
+  }
+  .big {
+    font-size: calc(2vh + 4vw);
+  }
+  .tex {
+    margin-left: 20px;
+    font-size: calc(2vh + 1vw);
+    -webkit-text-stroke: 1px $white;
+    -webkit-text-fill-color: $white;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .left {
+    flex: 0.5;
+
+    overflow: hidden;
+    @media only screen and (max-width: 768px) {
+      flex: 0.6;
+
+      .imgContainer {
+        height: 600px;
+        width: 600px;
+        margin-top: 0px;
+        padding: 30px;
+      }
+    }
+    .imgContainer {
+      height: 1200px;
+      width: 1200px;
+      background-color: $red;
+      -webkit-text-stroke: 0;
+      -webkit-text-fill-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      font-size: 45vh;
+      float: right;
+      margin-top: 10px;
+      @media only screen and (max-width: 768px) {
+        height: 600px;
+        width: 600px;
+        margin-top: 0px;
+      }
+    }
+  }
+  .right {
+    overflow: hidden;
+    flex: 0.5;
+    background-color: rgba(53, 77, 155, 0);
+    padding-top: 70px;
+    margin-left: 5vw;
+    
+    @media only screen and (max-width: 768px) {
+      flex: 0.5;
+      padding-top: 30px;
+      margin-left: 50px;
+    }
+    @media only screen and (max-width: 375px) {
+      flex: 0.75;
+    }
+    .button {
+      overflow: hidden;
+      transition: all 0.5s;
+      transform: translate(70%, 40%);
+      z-index: 200;
+      font-size: (calc(10px + 1vw));
+      width: (calc(30px + 20vw));
+      height: auto;
+      padding: 8px;
+      margin-top: 30px;
+      border-radius: 55px;
+      background-color: $red;
+      color: white;
+      cursor: var(--pointer);
+      border: none;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      @media only screen and (max-width: 768px) {
+        font-size: 15px;
+        width: (calc(30px + 40vw));
+        transform: translate(56%, 0%);
+      }
+    }
+    .button:hover {
+      
+      background-color: $white;
+      color:$black;
+      transition: all 0.6s;
+      //box-shadow: 0px 0px 5px black;
+    }
+
+  }
+  .arr {
+    position: relative;
+    color: $white;
+    top: 80%;
+    right: 10%;
+    font-size: 120px;
+    animation: blinker 2s ease-in-out infinite;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  @keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

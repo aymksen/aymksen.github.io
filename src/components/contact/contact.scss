@@ -1,0 +1,125 @@
+@import "../../global.scss";
+
+.contact {
+  //backdrop-filter: blur(2px);
+  
+  padding: 0;
+  height: 100%;
+  position: relative;
+  .text {
+    overflow: hidden;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(30px + 4vw);
+    font-style: italic;
+    font-weight: 500;
+    -webkit-text-stroke: 1.5px $white;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    transition: all 1.5s ease;
+    
+  }
+  .Eform {
+    border: 2px solid rgba(250, 248, 248, 0.863);
+    backdrop-filter: blur(1px);
+    margin-top: 40px;
+    overflow:none;
+    
+    
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(109, 109, 109, 0.096);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius:  40px;;
+    width: calc(200px + 50vw);
+    font-size: 26px;
+    position: absolute;
+    align-items: center;
+    padding: 20px 5vw 2vw 5vw;
+    text-align: center;
+    overflow: hidden;
+    height: calc(120px + 28vh + 100px);
+    left: 0;
+        right: 0;
+        top: 50px;
+        bottom: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: auto;
+    .input100 {
+      
+      width: calc(100px + 50vw);
+      height: calc(30px + 2vh);
+      font-size: calc(17px + 0.5vw);
+      border-radius: 35px;
+      border: solid rgb(255, 255, 255) 1px;
+      color: rgb(0, 0, 121);
+      margin: 5px 5px 10px 5px ;
+      cursor: $textp;
+      padding-left: 20px;
+    }
+    
+    .input100:focus,
+    input:focus {
+      outline: $white 2px;
+      outline-style: solid;
+    }
+    .message {
+      height: 20vh;
+      resize: none;
+      &::-webkit-scrollbar {
+        width: 10px;
+        //background-color: rgb(0, 11, 71);
+      }
+      &::-webkit-scrollbar-thumb {
+        direction: rtl;
+        border-radius: 5px;
+        background: rgb(0, 72, 150);
+      }
+
+      > * {
+        border-radius: 5px;
+        padding-top: 20px;
+
+        scroll-snap-align: start;
+      }
+    }
+    .sumbit {
+      width: calc(100px + 50vw);
+      height: calc(30px + 2vh);
+      border-radius: 30px;
+      border: none;
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+      background-color: $red;
+      cursor: pointer;
+      margin-bottom: 20px;
+      &:hover {
+        background-color: $reds;
+      }
+    }
+    .row {
+      background-color: green;
+    }
+    .row:hover{
+      background-color: rgb(3, 155, 3);
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    .Eform {
+      width: 75%;
+      //height: 55vh;
+      .input100,
+      .sumbit {
+        width: 90%;
+        border-radius: 30px;
+      }
+    }
+    .text {
+      font-size:65px;
+      padding-top: 50px;
+    }
+  }
+}
