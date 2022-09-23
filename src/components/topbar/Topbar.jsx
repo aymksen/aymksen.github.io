@@ -17,7 +17,7 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
           </a>
           <a
             className="itemContainer"
-            href="https://github.com/aymks"
+            href="https://github.com/aymksen"
             target="_blank"
             rel="noreferrer"
           >
@@ -41,7 +41,7 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
             <span></span>
           </a>
 
-          <a className="itemContainer" href="mailto:aymenmks99@gmail.com">
+          <a className="itemContainer" href="mailto:aymksen@gmail.com">
             <MailOutline className="icon" />
             <span></span>
           </a>
