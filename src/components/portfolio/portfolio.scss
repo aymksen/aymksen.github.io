@@ -43,7 +43,7 @@
       @media only screen and (max-width: 768px) {
         flex-wrap: wrap;
         margin: 10px 8px 10px 8px;
-        border-radius: 10px;
+        border-radius: 20px;
         width: 41%;
         height: calc(120px + 2vw);
       }
@@ -56,8 +56,9 @@
       justify-content: center;
       position: relative;
       cursor: pointer;
-      box-shadow: 0 0 11px rgba(33, 33, 33, 0.308);
-      border-radius: 20px;
+      //box-shadow: 0 0 11px rgba(33, 33, 33, 0.308);
+      box-shadow: rgba(0, 0, 0, 0.34) 2px 3px 4px;
+      border-radius: 25px;
       border: 2px solid rgba(250, 248, 248, 0.863);
       transition: all 0.5s ease;
       overflow: hidden;
