@@ -135,8 +135,8 @@
       
       }
     }
-    width: 100vw;
-    height: calc(100vh - 0px);
+    
+   
     
     &::-webkit-scrollbar {
       display: none;
@@ -146,10 +146,14 @@
       padding-top: 70px;
       width: 100vw;
       height: calc(100vh - 70px);
+      &:nth-child(2) {
+        height: auto;
+      }
       scroll-snap-align: start;
     }
     .cont {
       padding-top: 0px;
     }
   }
+  
 }

@@ -50,7 +50,7 @@ export default function Works() {
 //   }
   return (
     <div className="works" id="Skills">
-      <div data-aos="fade-up"  className="txt">Skills</div>
+      <div data-aos="fade-up" data-aos-delay="100" className="txt">Skills</div>
 
       <div  data-aos="fade-up" data-aos-delay="200" className="sliderc">
         <div className="slider">

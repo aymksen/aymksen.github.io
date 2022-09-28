@@ -80,7 +80,7 @@ export default function Portfolio() {
   return (
     <div  className="portfolio" id="portfolio">
       <div  data-aos="fade-up"  className="txt">Projects</div>
-      <ul data-aos="fade-up" data-aos-delay="100">
+      <ul data-aos="fade-up" data-aos-delay="200">
         {list.map((item) => (
           <PortfolioList
             title={item.title}
@@ -90,7 +90,7 @@ export default function Portfolio() {
           />
         ))}
       </ul>
-      <div data-aos="fade-up" data-aos-delay="200" className="container">
+      <div data-aos="fade-up" data-aos-delay="300" className="container">
         {data.map((d) => (
           <div className="item brd">
             <img src={d.img} alt="" />
