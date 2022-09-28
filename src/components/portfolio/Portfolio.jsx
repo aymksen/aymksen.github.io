@@ -25,6 +25,8 @@ export default function Portfolio() {
   //    }
   //  }
 
+
+
   useEffect(() =>{
    
     Aos.init({duration:2000});
@@ -102,7 +104,7 @@ export default function Portfolio() {
               onClick={() => {
                 if (d.link === true)
                   document.getElementById("if").style.display = "block";
-                  // document.getElementById("ifr").src="";
+                  document.getElementById("ifr").src="https://itch.io/embed-upload/5984634?color=333333";
               }}
               target="_blank"
               rel="noreferrer"
@@ -135,7 +137,7 @@ export default function Portfolio() {
           id='ifr'
           title="fr"
           frameborder="0"
-          src="https://itch.io/embed-upload/5984634?color=333333"
+          src=""
           allowfullscreen=""
         ></iframe>
       </div>

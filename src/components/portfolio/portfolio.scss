@@ -178,8 +178,9 @@
   height: 720px;
   overflow: hidden;
   border-radius: 20px;
-  background-color: rgba(90, 90, 90, 0.377);
+  background-color: rgb(54, 16, 56);
   @media only screen and (max-width: 768px) {
+    background-color: rgb(54, 16, 56);
     max-height: 80%;
     margin-top: 10px;
   }
