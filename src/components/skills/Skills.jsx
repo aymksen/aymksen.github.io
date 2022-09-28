@@ -50,9 +50,9 @@ export default function Works() {
 //   }
   return (
     <div className="works" id="Skills">
-      <div data-aos="fade-up" data-aos-delay="100" className="txt">Skills</div>
+      <div data-aos="fade-up" data-aos-delay="200" className="txt">Skills</div>
 
-      <div  data-aos="fade-up" data-aos-delay="200" className="sliderc">
+      <div  data-aos="fade-up" data-aos-delay="300" className="sliderc">
         <div className="slider">
           <div className="ic">
             <img src={require("./html.png")} alt=""/>
