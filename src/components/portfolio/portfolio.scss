@@ -55,7 +55,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      cursor: pointer;
+      //cursor: pointer;
       //box-shadow: 0 0 11px rgba(33, 33, 33, 0.308);
       box-shadow: rgba(0, 0, 0, 0.34) 2px 3px 4px;
       border-radius: 25px;
@@ -125,8 +125,10 @@
         }
       }
       &:hover {
+        
         transition: all 0.6s ease;
         .icon {
+          cursor: pointer;
           animation: blink 0.6s ease-out;
           display: block;
           transition: all 0.5s;

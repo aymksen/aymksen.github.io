@@ -149,8 +149,28 @@
       scroll-snap-align: start;
 
       &:nth-child(2) {
-        height: auto;
+        height: calc(80vh);
       }
+      @media only screen and (max-width: 360px) {
+        &:nth-child(2) {
+       height: 100vh;
+     }}
+     @media only screen and (max-width: 262px) {
+      &:nth-child(2) {
+     height: auto;
+   }}
+     @media only screen and (max-height: 736px) {
+      &:nth-child(2) {
+     height: 90vh;
+   }}
+     @media only screen and (max-height: 660px) {
+      &:nth-child(2) {
+     height: 120vh;
+   }}
+   @media only screen and (max-height: 670px) {
+    &:nth-child(2) {
+   height: 100vh;
+ }}
      
       @media only screen and (max-height: 740px) {
          &:nth-child(4) {
