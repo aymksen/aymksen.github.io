@@ -1,10 +1,10 @@
 import "./topbar.scss";
 import {
   MailOutline,
-  Instagram,
   WorkOutline,
   LinkedIn,
   GitHub,
+  Twitter,
 } from "@material-ui/icons";
 
 export default function Topbar({ menuOpen, setMenuOpen }) {
@@ -33,11 +33,11 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
           </a>
           <a
             className="itemContainer"
-            href="https://www.instagram.com/aymksen/"
+            href="https://www.Twitter.com/aymksen/"
             target="_blank"
             rel="noreferrer"
           >
-            <Instagram className="icon" />
+            <Twitter className="icon" />
             <span></span>
           </a>
 
