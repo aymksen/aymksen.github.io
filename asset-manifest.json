@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.da55b020.css",
-    "main.js": "/static/js/main.e7862aff.js",
+    "main.js": "/static/js/main.ff08e1c7.js",
     "static/media/forcast.gif": "/static/media/forcast.ce78995d810985ac3133.gif",
     "static/media/game1.gif": "/static/media/game1.2d445d9aada95c09b25b.gif",
     "static/media/MuesemPage.png": "/static/media/MuesemPage.961abe08219b76a82cd4.png",
@@ -15,10 +15,10 @@
     "static/media/21.jpg": "/static/media/21.5a68e42792a1c47a5838.jpg",
     "index.html": "/index.html",
     "main.da55b020.css.map": "/static/css/main.da55b020.css.map",
-    "main.e7862aff.js.map": "/static/js/main.e7862aff.js.map"
+    "main.ff08e1c7.js.map": "/static/js/main.ff08e1c7.js.map"
   },
   "entrypoints": [
     "static/css/main.da55b020.css",
-    "static/js/main.e7862aff.js"
+    "static/js/main.ff08e1c7.js"
   ]
 }
