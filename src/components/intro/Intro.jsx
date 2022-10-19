@@ -1,6 +1,5 @@
 import "./intro.scss";
 import { KeyboardArrowDown } from "@material-ui/icons";
-import pdf from './MyCv.pdf'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
