@@ -23,7 +23,7 @@ export default function Intro({ menuOpen, setMenuOpen }) {
           I'm a front-end developer with a background in graphic design, and I
           love to explore new features and implement functionality. 
         </div>
-        <a data-aos="fade-up" data-aos-delay="300" href={pdf} target="_blank" rel="noreferrer">
+        <a data-aos="fade-up" data-aos-delay="300" href="https://aymksen.github.io/Resume.pdf" target="_blank" rel="noreferrer">
         <button className="button" id="Resume">Check out my Resume</button></a>
       </div>
 
