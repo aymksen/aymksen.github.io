@@ -43,7 +43,7 @@ export default function Intro({ menuOpen, setMenuOpen }) {
           love to explore new features and implement functionality. 
         </div>
 
-        <a data-aos="fade-up" data-aos-delay="300" href="/#" variant="primary" onClick={openPDF}  >
+        <a data-aos="fade-up" data-aos-delay="300" variant="primary" onClick={openPDF}  >
 
 
         <button className="button" id="Resume">Check out my Resume</button></a>
