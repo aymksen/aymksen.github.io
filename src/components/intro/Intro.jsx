@@ -15,7 +15,7 @@ export default function Intro({ menuOpen, setMenuOpen }) {
   const openPDF = () => {
     const pdfWindow = window.open("Resume");
     const title     = "Resume";
-    const URI       = "Resume";
+    const URI       = "Resume/1";
     const html      = `
       <html>
         <head>
