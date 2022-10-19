@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.da55b020.css",
-    "main.js": "/static/js/main.ff08e1c7.js",
+    "main.js": "/static/js/main.0d40750a.js",
     "static/media/forcast.gif": "/static/media/forcast.ce78995d810985ac3133.gif",
     "static/media/game1.gif": "/static/media/game1.2d445d9aada95c09b25b.gif",
     "static/media/MuesemPage.png": "/static/media/MuesemPage.961abe08219b76a82cd4.png",
@@ -9,16 +9,16 @@
     "static/media/galleryapp.jpg": "/static/media/galleryapp.e0623c218ec1601ff55c.jpg",
     "static/media/mforcast.jpg": "/static/media/mforcast.51c46dfb7388ddc27785.jpg",
     "static/media/guess.png": "/static/media/guess.d6a11fcea04139d94f16.png",
-    "static/media/MyCv.pdf": "/static/media/MyCv.61aa861bfebb70381463.pdf",
+    "static/media/MyCv.pdf": "/static/media/MyCv.291daab098fa18a44968.pdf",
     "static/media/weatherapp.png": "/static/media/weatherapp.04d1eaf34624b9c6b7c5.png",
     "static/media/Mus.JPG": "/static/media/Mus.62e9c1af267275a4270f.JPG",
     "static/media/21.jpg": "/static/media/21.5a68e42792a1c47a5838.jpg",
     "index.html": "/index.html",
     "main.da55b020.css.map": "/static/css/main.da55b020.css.map",
-    "main.ff08e1c7.js.map": "/static/js/main.ff08e1c7.js.map"
+    "main.0d40750a.js.map": "/static/js/main.0d40750a.js.map"
   },
   "entrypoints": [
     "static/css/main.da55b020.css",
-    "static/js/main.ff08e1c7.js"
+    "static/js/main.0d40750a.js"
   ]
 }
