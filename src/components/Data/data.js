@@ -30,6 +30,14 @@ export const featuredPortfolio = [
   
   {
     id: 5,
+    title: "Arabic Quizz",
+    img: require("./arlt.JPG"),
+    link: "https://aymksen.github.io/ArabicLetterQuizz/",
+    github: "https://github.com/aymksen/ArabicLetterQuizz",
+  },
+
+  {
+    id: 6,
     title: "Guess the number",
     img: require("./guess.png"),
     link: "https://aymksen.github.io/GuessTheNumber/index.html",
@@ -37,13 +45,7 @@ export const featuredPortfolio = [
   },
  
   
-  {
-    id: 6,
-    title: "Weather app",
-    img: require("./weatherapp.png"),
-    link: "https://aymksen.github.io/weatherApp/",
-    github: "https://github.com/aymksen/weatherApp",
-  },
+  
   
 ];
 export const webPortfolio = [
@@ -77,11 +79,18 @@ export const webPortfolio = [
   },
   
   {
-    id: 4,
-    title: "Weather app",
-    img: require("./weatherapp.png"),
-    link: "https://aymksen.github.io/weatherApp/",
-    github: "https://github.com/aymksen/weatherApp",
+    id: 6,
+    title: "Arabic Quizz",
+    img: require("./arlt.JPG"),
+    link: "https://aymksen.github.io/ArabicLetterQuizz/",
+    github: "https://github.com/aymksen/ArabicLetterQuizz",
+  },
+  {
+    id: 6,
+    title: "LinkTree",
+    img: require("./linktree.JPG"),
+    link: "https://aymksen.github.io/linktree/",
+    github: "https://github.com/aymksen/linktree",
   },
   
 ];
