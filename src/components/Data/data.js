@@ -1,12 +1,19 @@
+/* eslint-disable no-trailing-spaces */
 export const featuredPortfolio = [
   {
     id: 5,
+    title: "Sport Spotter",
+    img: require("./sportspotter.png"),
+    link: "https://aymksen.github.io/SportSpotter/",
+    github: "https://github.com/aymksen/SportSpotter",
+  },
+  {
+    id: 9,
     title: "Arabic Learning",
     img: require("./arlearning.png"),
     link: "https://aymksen.github.io/Language-Learning-App/",
     github: "https://github.com/aymksen/Language-Learning-App",
   },
-
   {
     id: 1,
     title: "Forecast app",
@@ -51,6 +58,13 @@ export const featuredPortfolio = [
   
 ];
 export const webPortfolio = [
+  {
+    id: 5,
+    title: "Sport Spotter",
+    img: require("./sportspotter.png"),
+    link: "https://aymksen.github.io/SportSpotter/",
+    github: "https://github.com/aymksen/SportSpotter",
+  },  
   {
     id: 5,
     title: "Arabic Learning",
@@ -148,6 +162,13 @@ export const contentPortfolio = [
     img: require("./game1.gif"),
     link: true,
     github: "https://github.com/aymksen/MiniGame2D",
+  },
+  {
+    id: 4,
+    title: "Space Hunt",
+    img: require("./spacehunt.png"),
+    link: "https://github.com/aymksen/SpaceHunt",
+    github: "https://github.com/aymksen/SpaceHunt",
   },
   {
     id: 2,
