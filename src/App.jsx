@@ -12,12 +12,15 @@ import { useEffect } from "react";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const getTheme = () => {
-    return JSON.parse(localStorage.getItem("theme")) || false;
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme === "true"; // stored as string, convert to boolean
   };
+  
   const [theme, setTheme] = useState(getTheme);
 
   useEffect(() => {
-    localStorage.setItem("theme", JSON.stringify(theme));
+    localStorage.setItem("theme", theme.toString());
+
   }, [theme]);
 
   function Checkbox() {
@@ -37,8 +40,6 @@ function App() {
       
         <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
          <div className="banner">
-        <img src={require("./ukraine.png")} alt=""/>
-        <p>I stand with Ukraine and its people</p>
         </div> 
         <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
