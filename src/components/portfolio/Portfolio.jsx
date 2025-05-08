@@ -85,6 +85,7 @@ export default function Portfolio() {
       <ul data-aos="fade-up" data-aos-delay="200">
         {list.map((item) => (
           <PortfolioList
+            key={item.id}
             title={item.title}
             active={selected === item.id}
             setSelected={setSelected}
@@ -136,9 +137,9 @@ export default function Portfolio() {
         <iframe
           id='ifr'
           title="fr"
-          frameborder="0"
+          frameBorder="0"
           src=""
-          allowfullscreen=""
+          allowFullScreen=""
         ></iframe>
       </div>
     </div>
