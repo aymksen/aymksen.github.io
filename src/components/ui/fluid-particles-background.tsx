@@ -83,13 +83,16 @@ export interface FluidParticlesBackgroundProps {
   className?: string;
 }
 
-/** The theme's --bg (a hex colour) at 12% alpha, used to fade particle trails. */
+/**
+ * The theme's --bg, painted at low alpha each frame to fade particle trails.
+ * Passed to the canvas as-is: the production CSS minifier rewrites #000000 as #000,
+ * so parsing it by hand broke the dark theme.
+ */
 function readTrailColor(): string {
-  const bg = getComputedStyle(document.documentElement).getPropertyValue("--bg").trim();
-  const hex = /^#([0-9a-f]{6})$/i.exec(bg)?.[1] ?? "ffffff";
-  const n = parseInt(hex, 16);
-  return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, 0.12)`;
+  return getComputedStyle(document.documentElement).getPropertyValue("--bg").trim() || "#ffffff";
 }
+
+const TRAIL_ALPHA = 0.12;
 
 export function FluidParticlesBackground({
   children,
@@ -138,8 +141,10 @@ export function FluidParticlesBackground({
     let visible = false;
 
     const step = () => {
+      ctx.globalAlpha = TRAIL_ALPHA;
       ctx.fillStyle = trail;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.globalAlpha = 1;
       const t = Date.now() * 1e-4;
       for (const pt of particles) {
         pt.life += 1;
