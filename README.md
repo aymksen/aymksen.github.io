@@ -1,16 +1,38 @@
-<h1 align="center">Languages and Tools Used</h1>
+# Aymen Makhkhas — Portfolio
 
+React 19 + TypeScript + Tailwind CSS v4, built with Vite.
 
-<img align="left" alt="React" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" style="padding-right:10px;" /><p>React</p>
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # type-checks, then outputs static files to dist/
+```
 
-<img align="left" alt="SASS" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" style="padding-right:10px;" /><p>SASS</p>
+`dist/` is a static site served from `/`. Pushing to `main` runs `.github/workflows/deploy.yml`,
+which builds it and publishes `dist/` to the `gh-pages` branch that serves https://aymksen.github.io.
 
-<img align="left" alt="API" width="26px" src="https://user-images.githubusercontent.com/76121581/194318773-eda7d321-27a6-4ab3-bc85-6d6aec7ad0ee.png" style="padding-right:10px;" /><p>Google Fonts API</p>
+## Content
 
-<img align="left" alt="JavaScript" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style="padding-right:10px;" /><p>JavaScript</p>
+All text lives in `src/data/portfolio.ts`, and the résumé link points to `public/Resume.pdf`.
 
-<img align="left" alt="ghp" width="26px" src="https://user-images.githubusercontent.com/3369400/139447912-e0f43f33-6d9f-45f8-be46-2df5bbc91289.png" style="padding-right:10px;" /><p>GitHub Pages</p>
+## Components
 
+Ported from [21st.dev](https://21st.dev) into typed components under `src/components/ui/`:
 
+| Component | Used for |
+| --- | --- |
+| `liquid-metal-hero` (@chowlol202) | Hero with the chrome metaball shader |
+| `gradient-wave-text` (@tom_ui) | Colour wave through the name and the contact headline |
+| `apple-hello-effect` (@ncdai) | Quick "hello" intro (~1.5 s), once per visit |
+| `apple-tahoe-liquid-glass-button` (@jahed) | Every button |
+| `apple-liquid-glass-switcher` (@dennysdionigi) | Light / dark theme switch |
+| `liquid-weather-glass` (@uilayout.contact) | Glass cards in the About bento, incl. live Münster time and weather |
+| `fluid-particles-background` (@bundui) | Contact section background |
+| `globe` (@ruixen.ui) | Spinning globe in the About bento |
 
+Changes from the originals are noted at the top of each file (mostly performance:
+animation loops pause off-screen, the glass viewport can render with WebGL, and the
+card turbulence filter is opt-in).
 
+The About card fetches current weather from [Open-Meteo](https://open-meteo.com) in the
+visitor's browser; everything else, including the Inter font, is self-hosted.

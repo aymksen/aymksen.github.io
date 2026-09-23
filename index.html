@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Aymen Makhkhas — Full-Stack Software Developer</title>
+    <meta
+      name="description"
+      content="Aymen Makhkhas — full-stack software developer in Münster, Germany. React, TypeScript, Node.js, Python and PostgreSQL."
+    />
+    <meta name="theme-color" content="#f5f5f7" />
+    <link rel="icon" type="image/png" href="/am1.png" />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var t = localStorage.getItem("am-theme");
+          if (t !== "light" && t !== "dark") {
+            t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          }
+          var el = document.documentElement;
+          el.dataset.theme = t;
+          el.classList.toggle("dark", t === "dark");
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

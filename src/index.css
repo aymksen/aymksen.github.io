@@ -1,0 +1,140 @@
+@import "@fontsource-variable/inter/opsz.css";
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f5f5f7;
+  --bg-elevated: #ffffff;
+  --fg: #1d1d1f;
+  --muted: #6e6e73;
+  --line: rgb(0 0 0 / 0.08);
+  --accent: #155bd0;
+  --accent-fg: #ffffff;
+
+  /* Tahoe glass button */
+  --glass-fg: rgb(0 0 0 / 0.85);
+  --glass-fill: 25%;
+
+  /* Liquid glass switcher */
+  --c-glass: #bbbbbc;
+  --c-light: #fff;
+  --c-dark: #000;
+  --c-content: #224;
+  --c-action: #155bd0;
+  --glass-reflex-dark: 1;
+  --glass-reflex-light: 1;
+  --saturation: 150%;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #000000;
+  --bg-elevated: #161617;
+  --fg: #f5f5f7;
+  --muted: #a1a1a6;
+  --line: rgb(255 255 255 / 0.12);
+  --accent: #2997ff;
+  --accent-fg: #ffffff;
+
+  --glass-fg: rgb(255 255 255 / 0.92);
+  --glass-fill: 10%;
+
+  --c-glass: #bbbbbc;
+  --c-light: #fff;
+  --c-dark: #000;
+  --c-content: #e1e1e1;
+  --c-action: #2997ff;
+  --glass-reflex-dark: 2;
+  --glass-reflex-light: 0.3;
+  --saturation: 150%;
+
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: "Inter Variable", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  --color-bg: var(--bg);
+  --color-elevated: var(--bg-elevated);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  /* shadcn-style names used by some 21st.dev components */
+  --color-foreground: var(--fg);
+  --color-background: var(--bg);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition:
+      background-color 0.4s cubic-bezier(1, 0, 0.4, 1),
+      color 0.4s cubic-bezier(1, 0, 0.4, 1);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 25%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Globe (About section) */
+@keyframes globe-spin {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: var(--globe-w) 0;
+  }
+}
+
+@keyframes globe-twinkle {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+}

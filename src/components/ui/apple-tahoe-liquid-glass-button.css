@@ -1,0 +1,97 @@
+/* Hover / press behaviour for LiquidGlassButton, modelled on Apple's Liquid Glass:
+   the glass lifts and leans toward the pointer, a specular highlight follows the
+   cursor, the rim brightens, and pressing squishes the glass down.
+   Registered properties let the numbers themselves animate. */
+
+@property --glass-hover {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --glass-press {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --glass-tx {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+@property --glass-ty {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+.liquid-glass-btn {
+  --glass-mx: 50%;
+  --glass-my: 0%;
+  transform: translate(var(--glass-tx), var(--glass-ty))
+    scale(calc(1 + var(--glass-hover) * 0.045 - var(--glass-press) * 0.075), calc(1 + var(--glass-hover) * 0.045 - var(--glass-press) * 0.1));
+  transform-origin: center;
+  transition:
+    --glass-hover 260ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    --glass-press 140ms ease-out,
+    --glass-tx 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    --glass-ty 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: hover) {
+  .liquid-glass-btn:hover {
+    --glass-hover: 1;
+  }
+}
+
+.liquid-glass-btn:active {
+  --glass-press: 1;
+}
+
+.liquid-glass-btn:focus-visible {
+  --glass-hover: 1;
+}
+
+/* Soft shadow under the glass that deepens as it lifts. */
+.liquid-glass-btn__lift {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow:
+    0 10px 28px -10px rgb(0 0 0 / 0.45),
+    0 2px 8px -2px rgb(0 0 0 / 0.2);
+  opacity: calc(var(--glass-hover) * (1 - var(--glass-press) * 0.6));
+}
+
+/* Specular highlight that tracks the pointer. */
+.liquid-glass-btn__shine {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(90px circle at var(--glass-mx) var(--glass-my), rgb(255 255 255 / 0.5), transparent 70%),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.18), transparent 55%);
+  mix-blend-mode: soft-light;
+  opacity: calc(var(--glass-hover) * 0.9 + var(--glass-press) * 0.4);
+}
+
+:root.dark .liquid-glass-btn__shine {
+  mix-blend-mode: screen;
+  opacity: calc(var(--glass-hover) * 0.45 + var(--glass-press) * 0.25);
+}
+
+.liquid-glass-btn__fill {
+  filter: brightness(calc(1 + var(--glass-hover) * 0.1 - var(--glass-press) * 0.06));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liquid-glass-btn {
+    transform: none;
+  }
+}

@@ -1,0 +1,171 @@
+/* Ported from 21st.dev — @dennysdionigi/apple-liquid-glass-switcher.
+   Theme colours (--c-glass, --c-light, …) are defined per theme in index.css.
+   Changed: no longer fixed to the top of the window, has a compact size, and only light/dark. */
+
+.switcher {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 168px;
+  max-width: 168px;
+  height: 70px;
+  margin: 0;
+  padding: 8px 12px 10px;
+  border: none;
+  border-radius: 99em;
+  background-color: color-mix(in srgb, var(--c-glass) 12%, transparent);
+  -webkit-backdrop-filter: blur(8px) saturate(var(--saturation));
+  backdrop-filter: blur(8px) url(#switcher) saturate(var(--saturation));
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 10%), transparent),
+    inset 1.8px 3px 0 -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 90%), transparent),
+    inset -2px -2px 0 -2px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 80%), transparent),
+    inset -3px -8px 1px -6px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 60%), transparent),
+    inset -0.3px -1px 4px 0 color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 12%), transparent),
+    inset -1.5px 2.5px 0 -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
+    inset 0 3px 4px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
+    inset 2px -6.5px 1px -4px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
+    0 1px 5px 0 color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
+    0 6px 16px 0 color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 8%), transparent);
+  transition:
+    background-color 400ms cubic-bezier(1, 0, 0.4, 1),
+    box-shadow 400ms cubic-bezier(1, 0, 0.4, 1);
+}
+
+.switcher--compact {
+  zoom: 0.56;
+}
+
+.switcher__legend,
+.switcher__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.switcher__icon {
+  display: block;
+  width: 100%;
+  transition: scale 200ms cubic-bezier(0.5, 0, 0, 1);
+}
+
+.switcher__filter {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.switcher__option {
+  --c: var(--c-content);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 100%;
+  padding: 0 16px;
+  border-radius: 99em;
+  opacity: 1;
+  transition: all 160ms;
+}
+
+.switcher__option:hover {
+  --c: var(--c-action);
+  cursor: pointer;
+}
+
+.switcher__option:hover .switcher__icon {
+  scale: 1.2;
+}
+
+.switcher__option:has(input:focus-visible) {
+  outline: 3px solid var(--c-action);
+  outline-offset: -2px;
+}
+
+.switcher__option:has(input:checked) {
+  --c: var(--c-content);
+  cursor: auto;
+}
+
+.switcher__option:has(input:checked) .switcher__icon {
+  scale: 1;
+}
+
+.switcher::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  left: 4px;
+  display: block;
+  width: 84px;
+  height: calc(100% - 10px);
+  border-radius: 99em;
+  background-color: color-mix(in srgb, var(--c-glass) 36%, transparent);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 10%), transparent),
+    inset 2px 1px 0 -1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 90%), transparent),
+    inset -1.5px -1px 0 -1px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 80%), transparent),
+    inset -2px -6px 1px -5px color-mix(in srgb, var(--c-light) calc(var(--glass-reflex-light) * 60%), transparent),
+    inset -1px 2px 3px -1px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 20%), transparent),
+    inset 0 -4px 1px -2px color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 10%), transparent),
+    0 3px 6px 0 color-mix(in srgb, var(--c-dark) calc(var(--glass-reflex-dark) * 8%), transparent);
+}
+
+.switcher:has(input[c-option="1"]:checked)::after {
+  translate: 0 0;
+  transform-origin: right;
+  transition:
+    background-color 400ms cubic-bezier(1, 0, 0.4, 1),
+    box-shadow 400ms cubic-bezier(1, 0, 0.4, 1),
+    translate 400ms cubic-bezier(1, 0, 0.4, 1);
+  animation: scaleToggle 440ms ease;
+}
+
+.switcher:has(input[c-option="2"]:checked)::after {
+  translate: 76px 0;
+  transform-origin: left;
+  transition:
+    background-color 400ms cubic-bezier(1, 0, 0.4, 1),
+    box-shadow 400ms cubic-bezier(1, 0, 0.4, 1),
+    translate 400ms cubic-bezier(1, 0, 0.4, 1);
+  animation: scaleToggle2 440ms ease;
+}
+
+@keyframes scaleToggle {
+  0% {
+    scale: 1 1;
+  }
+  50% {
+    scale: 1.1 1;
+  }
+  100% {
+    scale: 1 1;
+  }
+}
+
+@keyframes scaleToggle2 {
+  0% {
+    scale: 1 1;
+  }
+  50% {
+    scale: 1.2 1;
+  }
+  100% {
+    scale: 1 1;
+  }
+}
